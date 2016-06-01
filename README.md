@@ -11,8 +11,16 @@
 
 Copy usr/sbin/xe-set-* into /usr/sbin/ and chmod +x
 
+### You can use a copy of kickstart provided file
+
+There is a sample kickstart file in ks/ubuntu-14.04.ks
+
 ## Install Upstart script on guest VM:
 
 Copy etc/init/xe-automate.conf into /etc/init/
 
 ## Reboot
+
+## Changelog
+
+* Restart network using ifdown && ifup
