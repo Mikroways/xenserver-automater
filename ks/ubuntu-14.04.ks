@@ -91,7 +91,7 @@ echo .
 
 
 # Remove password question when sudo
-#sed -i.bak '/^%sudo\t/d' /etc/sudoers && echo -e "%sudo ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers
+sed -i.bak '/^%sudo\t/d' /etc/sudoers && echo "%sudo ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers
 
 # Add xenfs to fstab
 echo "xenfs /proc/xen xenfs defaults 0 0" >> /etc/fstab
@@ -128,5 +128,6 @@ sed -i 's/${sixteenbit}//' /etc/grub.d/10_linux
 echo -n "."
 update-grub
 echo .
+
 
 %end
